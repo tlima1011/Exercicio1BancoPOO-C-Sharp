@@ -27,6 +27,11 @@ namespace Exercicio1BancoPOO_C_Sharp
             Saldo += DepositoInicial; 
         }
 
+        public void Saque(double valor)
+        {
+            Saldo -= valor + 5.00; 
+        }
+
 
         public override string ToString()
         {

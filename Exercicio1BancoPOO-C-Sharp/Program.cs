@@ -43,14 +43,12 @@ namespace Exercicio1BancoPOO_C_Sharp
             Console.WriteLine("\nDados da conta atualizados:");
             Console.WriteLine(c);
 
-           
+            Console.Write("Entre um valor para saque: ");
+            valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            c.Saque(valor);
 
-
-
-            
-         
-           
-
+            Console.WriteLine("\nDados da conta atualizados:");
+            Console.WriteLine(c);
 
         }
     }
