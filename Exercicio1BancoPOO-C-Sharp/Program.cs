@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Exercicio1BancoPOO_C_Sharp
 {
@@ -6,7 +7,17 @@ namespace Exercicio1BancoPOO_C_Sharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ContaBancaria c;
+
+            Console.Write("Entre o número da conta: ");
+            int num = int.Parse(Console.ReadLine()); 
+
+
+            
+            Entre o titular da conta: Maria Brown
+            Haverá depósito inicial(s / n) ? n
+
+
         }
     }
 }
