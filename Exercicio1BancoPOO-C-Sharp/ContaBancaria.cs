@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Drawing;
+using System.Globalization;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Exercicio1BancoPOO_C_Sharp
 {
@@ -10,14 +11,29 @@ namespace Exercicio1BancoPOO_C_Sharp
         public int Numero { get; private set; }
         public double Saldo { get; private set;}
 
-        public ContaBancaria(string t, int n)
+        public ContaBancaria(int n, string t)
         {
             Titular = t;
             Numero = n; 
         }
 
+        public ContaBancaria(int num, string titular, double DepositoInicial) : this(num, titular)
+        {
+            Deposito(DepositoInicial); 
+        }
+
+        public void Deposito(double DepositoInicial)
+        {
+            Saldo += DepositoInicial; 
+        }
 
 
-
+        public override string ToString()
+        {
+            return "Conta: " + Numero 
+                + ", Titular: " +Titular
+                + ", Saldo: $ " + Saldo.ToString("F2",CultureInfo.InvariantCulture);
+            //Conta 7801, Titular: Maria Brown, Saldo: $ -3.00
+        }
     }
 }
