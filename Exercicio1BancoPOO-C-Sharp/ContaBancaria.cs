@@ -24,12 +24,26 @@ namespace Exercicio1BancoPOO_C_Sharp
 
         public void Deposito(double DepositoInicial)
         {
-            Saldo += DepositoInicial; 
+            if(DepositoInicial <= 0)
+            {
+                Console.WriteLine("Inválido, Depósito não pode ser menor ou igual a 0.0");
+            }
+            else
+            {
+                Saldo += DepositoInicial;
+            }
         }
 
         public void Saque(double valor)
         {
-            Saldo -= valor + 5.00; 
+            if(valor <= 0)
+            {
+                Console.WriteLine("Inválido, saque não pode ser menor ou igual a 0.0");
+            }
+            else
+            {
+                Saldo -= valor + 5.00;
+            }
         }
 
 
