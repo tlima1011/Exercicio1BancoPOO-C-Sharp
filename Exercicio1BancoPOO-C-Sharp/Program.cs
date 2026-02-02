@@ -26,15 +26,23 @@ namespace Exercicio1BancoPOO_C_Sharp
                 Console.Write("Entre o valor de depósito inicial: ");
                 valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 c = new ContaBancaria(num, titular, valor);
-                Console.WriteLine();
+                Console.WriteLine("\nDados da Conta: ");
                 Console.WriteLine(c);
             }
             else
             {
                 c = new ContaBancaria(num,titular);
-                Console.WriteLine();
+                Console.WriteLine("\nDados da Conta: ");
                 Console.WriteLine(c);
             }
+
+            Console.Write("Entre um valor para depósito: ");
+            valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            c.Deposito(valor);
+
+            Console.WriteLine("\nDados da conta atualizados:");
+            Console.WriteLine(c);
+
            
 
 
